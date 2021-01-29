@@ -1,6 +1,7 @@
 const express = require('express')
 const logger = require('morgan')
 const bodyParser = require('body-parser')
+const { verifyJson } = require('./helper/json.check')
 
 const Routes = require('./routes')
 
@@ -13,6 +14,8 @@ app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
-app.use('/', Routes)
+//verify JSON helps to check if the payload is JSON
+
+app.use('/', verifyJson, Routes)
 
 app.listen(port, () => { console.log(`App running on port ${port}`)})

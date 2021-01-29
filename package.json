@@ -2,10 +2,11 @@
   "name": "rule-validation",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/api.js"
+    "start": "node server/api.js",
+    "server": "nodemon api.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "express": "^4.16.2",
     "joi": "^13.0.2",
     "lodash": "^4.17.4",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "nodemon": "^2.0.7"
   }
 }
