@@ -1,4 +1,4 @@
- // @desc Home route
+ // @desc Checks for invalid Payload
 // @route  GET /
 // @access Public
 exports.verifyJson = (err, req, res, next) => {
