@@ -13,6 +13,7 @@ app.set('post', port)
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
+//app.use(verifyJson)
 
 //verify JSON helps to check if the payload is JSON
 

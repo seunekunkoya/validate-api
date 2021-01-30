@@ -4,10 +4,9 @@ const { schema } = require("./validator.schema");
 const apiValidation = (schema, property) => { 
     
   return (req, res, next) => { 
-    const { rule:{field, condition, condition_value}, data } = req.body
+    // const { rule:{field, condition, condition_value}, data } = req.body    
+    // console.log(field)
 
-    
-    console.log(field)
   const { error } = Joi.validate(req.body, schema); 
   const valid = error == null; 
 
